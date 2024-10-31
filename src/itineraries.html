@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Itineraries</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Itineraries</h1>
+    <nav>
+        <button onclick="window.location.href = 'index.html'">Back to Explorer</button>
+    </nav>
+
+    <!-- Button to open the modal -->
+    <button onclick="openModal()">Add New Itinerary</button>
+
+    <!-- Modal for Adding/Editing Itineraries -->
+    <div id="itineraryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Add/Edit Itinerary</h2>
+            <input type="text" id="country-name" placeholder="Country Name" required>
+            <input type="text" id="notes" placeholder="Notes" required>
+            <button onclick="addOrUpdateItinerary()">Save</button>
+
+        </div>
+    </div>
+
+    <!-- Section to Display Itineraries -->
+    <ul id="itinerary-list"></ul>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

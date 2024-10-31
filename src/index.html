@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>World Explorer</h1>
+
+    <!-- Navigation to Itineraries Page -->
+    <nav>
+        <button onclick="window.location.href = 'itineraries.html'">View My Itineraries</button>
+        <button onclick="fetchCountryData()">Fetch Country Data</button>
+    </nav>
+
+    <!-- Loading Spinner -->
+    <div id="loading" style="display:none;">
+        <img src="spinner.gif" alt="Loading..." width="50">
+    </div>
+
+    <!-- Section to Display Country Data from API -->
+    <div id="country-data"></div>
+
+    
+    <script src="renderer.js"></script>
+</body>
+</html>
